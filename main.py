@@ -46,10 +46,10 @@ def sort_by_(list_x, list_y):
     list_y_name = 'list_y'
     df = pd.DataFrame({list_x_name:list_x, list_y_name:list_y})
     
-    # if its time value, use:
+    # if it is 'time' value, use:
     df[list_x_name]  = [pd.to_datetime(i) for i in df[list_x_name]]
     
-    # additional print to check correspondence
+    # additional print to check the correspondence
     print(df.sort_values(by=list_x_name))
     return df
 
